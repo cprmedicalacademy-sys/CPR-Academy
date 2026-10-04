@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Google Fonts for Bengali script - Hind Siliguri and Noto Serif Bengali for perfect, unbroken Bangla font rendering */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: "SutonnyMJ";
+  src: url("/fonts/SutonnyMJ.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Times New Roman", Times, "Hind Siliguri", "Noto Serif Bengali", serif;
+  --font-bangla: "Hind Siliguri", "Noto Serif Bengali", "Noto Sans Bengali", "Kalpurush", "SolaimanLipi", "Vrinda", system-ui, sans-serif;
+  --font-english: "Times New Roman", Times, "Hind Siliguri", serif;
+}
+
+html, body {
+  font-family: "Times New Roman", Times, "Hind Siliguri", "Noto Serif Bengali", serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+/* English Content strictly uses Times New Roman with Hind Siliguri as Unicode fallback so Bengali characters inside English containers never break */
+.font-english {
+  font-family: "Times New Roman", Times, "Hind Siliguri", "Noto Serif Bengali", serif !important;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Bangla Content strictly uses pristine, unbroken Unicode Bengali fonts */
+.font-bangla {
+  font-family: "Hind Siliguri", "Noto Serif Bengali", "Noto Sans Bengali", "SolaimanLipi", "Kalpurush", "SutonnyMJ", sans-serif !important;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+}
+
+/* Custom scrollbars and exam utilities */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Prevent unwanted copy during exam */
+.exam-secure-mode {
+  user-select: none;
+  -webkit-user-select: none;
+}

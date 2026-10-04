@@ -1,0 +1,6 @@
+{
+  "name": "CPR Medical Academy - Online Examination Portal",
+  "description": "Professional online examination platform for CPR Medical Academy featuring automated evaluation, question management, student portal, and real-time exam engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
